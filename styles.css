@@ -1,0 +1,38 @@
+body {
+    padding: 10px 10%;
+    background-color: whitesmoke;
+}
+
+header {
+    padding: 20px 0px;
+}
+
+header h1 {
+    display: inline;
+}
+
+header button {
+    float: right;
+}
+
+#search {
+    padding: 2px;
+}
+
+#filter{
+    width: 60px;
+    padding: 2px;
+}
+
+#players-table {
+    width: 100%;
+    border-collapse: collapse; 
+    border-spacing: 0;
+    margin-top: 20px;
+}
+
+#players-table th, td{
+    border: 1px solid gainsboro;
+    text-align: left;
+    padding: 8px 4px;
+}
