@@ -503,7 +503,8 @@ inputSearchElem.addEventListener("keyup", () => {
 let selectTeamElem = document.getElementById("team-filter");
 selectTeamElem.addEventListener("change", () => {
     let word = selectTeamElem.value.toLowerCase();
-    let rows = document.querySelectorAll("tbody tr");
+    let rows = document.querySelectorAll("tbody tr:not([style*='display:none'])");
+    console.log(rows)
     doFilter(rows, 1, word);
 });
 
@@ -541,9 +542,14 @@ for (header of headers) {
 
         // Sort the rows
         rowsArray.sort((a, b) => {
+            
             let aVal = a.cells[colIndex].innerText;
             let bVal = b.cells[colIndex].innerText;
 
+            // if its comparing numbers (not NaN means the string is a number)
+            if (!isNaN(aVal)) {
+                return ascending ? aVal-bVal : bVal-aVal;
+            }
             if (aVal < bVal) {
                 return ascending ? -1 : 1;
             }
