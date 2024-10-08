@@ -1,38 +1,70 @@
 body {
-    padding: 10px 10%;
-    background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 header {
-    padding: 20px 0px;
-}
-
-header h1 {
-    display: inline;
-}
-
-header button {
-    float: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 #search {
-    padding: 2px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-right: 10px;
 }
 
-#filter{
-    width: 60px;
-    padding: 2px;
+#team-filter {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 150px;
 }
 
-#players-table {
+.table-filters {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+table {
     width: 100%;
-    border-collapse: collapse; 
-    border-spacing: 0;
-    margin-top: 20px;
+    border-collapse: collapse;
 }
 
-#players-table th, td{
-    border: 1px solid gainsboro;
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ddd;
     text-align: left;
-    padding: 8px 4px;
+}
+
+th {
+    cursor: pointer;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+.dark-mode table {
+    border-color: #555;
+}
+
+.dark-mode th,
+.dark-mode td {
+    border-color: #555;
 }
