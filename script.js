@@ -572,15 +572,7 @@ for (header of headers) {
 //---------------------------------------------------------------------
 // Dark mode toggle
 //---------------------------------------------------------------------
-let lightMode = true;
-let body = document.querySelector("body");
 let toggleButton = document.getElementById("dark-mode-toggle");
 toggleButton.addEventListener("click", () => {
-    if (lightMode) {
-        body.className = "dark-mode";
-        lightMode = !lightMode;
-    } else {
-        body.className = "";
-        lightMode = !lightMode;
-    }
+    document.body.classList.toggle("dark-mode")
 })
